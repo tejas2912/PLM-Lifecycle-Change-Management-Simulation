@@ -1,5 +1,5 @@
-PLM Lifecycle & Change Management Simulation
-Overview
+🚀 PLM Lifecycle & Change Management Simulation
+📌 Overview
 
 This project is a Java-based simulation of core Product Lifecycle Management (PLM) principles inspired by enterprise systems such as Siemens Teamcenter.
 
@@ -17,8 +17,8 @@ Business rule validation at service layer
 
 The objective of this project is to understand how enterprise PLM systems enforce revision control, traceability, and lifecycle discipline internally.
 
-Core Concepts Implemented
-1. Item And Item Revision
+🧠 Core Concepts Implemented
+1️⃣ Item vs Item Revision
 
 Item represents a product (constant identity).
 
@@ -26,17 +26,16 @@ ItemRevision represents a specific version of that product.
 
 Released revisions cannot be modified.
 
-Any modification requires a new revision.
+Any modification requires creation of a new revision.
 
-This mirrors real PLM revision control logic.
+✔ This mirrors real-world PLM revision control logic.
 
-2. Lifecycle State Machine
+2️⃣ Lifecycle State Machine
 
 Each revision follows strict state transitions:
 
 WORKING → IN_REVIEW → RELEASED
-
-Enforced Rules:
+🔒 Enforced Rules
 
 Only WORKING revision can be submitted for review.
 
@@ -44,13 +43,13 @@ Only IN_REVIEW revision can be approved.
 
 RELEASED revision cannot be modified.
 
-Invalid transitions are blocked at service layer.
+Invalid transitions are blocked at the service layer.
 
-This simulates workflow-driven lifecycle governance.
+✔ This simulates workflow-driven lifecycle governance.
 
-3. Change Management (ECR → ECO)
+3️⃣ Change Management (ECR → ECO)
 
-The project enforces controlled revision creation through change management:
+The system enforces controlled revision creation through structured change management:
 
 Raise Change Request (ECR)
 
@@ -62,9 +61,9 @@ Create New Revision (starts in WORKING state)
 
 Direct revision creation after RELEASED state is blocked to ensure governance discipline.
 
-Architecture Design
+🏗 Architecture Design
 
-The system follows a layered architecture:
+The system follows a clean layered architecture:
 
 Console UI (PLMApplication)
         ↓
@@ -78,7 +77,7 @@ Domain Model
    - LifecycleState (Enum)
         ↓
 InMemoryDatabase
-Design Principles Used
+🧩 Design Principles Used
 
 Separation of Concerns
 
@@ -90,9 +89,9 @@ State Machine Pattern
 
 Revision Traceability
 
-All critical validation logic is enforced in the service layer to prevent bypassing rules from UI.
+All critical validation logic is enforced at the service layer to prevent bypassing rules from the UI.
 
-Key Features
+✨ Key Features
 
 Create Items and Revisions
 
@@ -106,11 +105,11 @@ Maintain revision history per item
 
 Clear console feedback for invalid operations
 
-Technical Stack
+🛠 Technical Stack
 
 Java (Core)
 
-OOP Principles
+Object-Oriented Programming (OOP)
 
 Enum-based State Machine
 
@@ -118,7 +117,7 @@ In-Memory Data Store
 
 Layered Architecture Design
 
-Example Controlled Flow
+🔁 Example Controlled Flow
 1. Create Item
 2. Create Revision A
 3. Submit for Review
@@ -128,15 +127,11 @@ Example Controlled Flow
 7. Create Revision B
 8. Submit → Approve
 
-This ensures:
+✔ No uncontrolled modification
+✔ Complete traceability
+✔ Governance enforcement
 
-No uncontrolled modification
-
-Complete traceability
-
-Governance enforcement
-
-Learning Outcome
+📘 Learning Outcome
 
 Through this implementation, I gained practical understanding of:
 
@@ -150,7 +145,7 @@ Service-layer business rule enforcement
 
 Enterprise-style validation design
 
-Future Enhancements
+🔮 Future Enhancements
 
 Replace in-memory store with relational database (JDBC/SQL)
 
@@ -162,6 +157,6 @@ Add BOM structure per revision
 
 Add unit tests
 
-Author
+👨‍💻 Author
 
 Tejas Lahade
